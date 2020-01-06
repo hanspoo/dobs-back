@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">	
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>
+	Indicadores diarios
+</title><link rel="stylesheet" type="text/css" href="../styles/indicadores.css">
+
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="../resources/FuncionesGlobales/functions.js"></script>
+
+    <!-- acceso remoto para la comunicación entre el cliente y servidor-->
+
+    <script type="text/javascript" src="../resources/FuncionesGlobales/rs.js"></script>
+
+    <script type="text/javascript" src="../resources/FuncionesGlobales/net.js"></script>
+
+    
+    <script type="text/javascript">
+     function call_refresca_ticket() {
+        var time_out = 180000;
+        setInterval('refresca_ticket()', time_out );
+   }
+    </script>
+
+    <script type="text/javascript">
+        // Para google Analytics
+        var idGoogleAnalytics = 'UA-26456613-2'
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', idGoogleAnalytics]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+<script src="moz-extension://cd17a623-e9c9-437e-a979-4ec3a01652d2/assets/prompt.js"></script></head>
+<body onload="javascript:call_refresca_ticket();" tcap-name="mainman">
+    <form method="post" action="./Serie.aspx?gcode=PRE_TCO&amp;param=RABmAFYAWQB3AGYAaQBuAEkALQAzADUAbgBNAGgAaAAkADUAVwBQAC4AbQBYADAARwBOAGUAYwBjACMAQQBaAHAARgBhAGcAUABTAGUAdwA1ADQAMQA0AE0AawBLAF8AdQBDACQASABzAG0AXwA2AHQAawBvAFcAZwBKAEwAegBzAF8AbgBMAHIAYgBDAC4ARQA3AFUAVwB4AFIAWQBhAEEAOABkAHkAZwAxAEEARAA%3d" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTExODUzNDc3MA9kFgICAw9kFiQCAQ8WBB4EaHJlZgUWaHR0cDovL3d3dy5iY2VudHJhbC5jbB4JaW5uZXJodG1sBQhXZWIgQkNDaGQCAw8WBB8ABSRJbmRpY2Fkb3Jlc0RpYXJpb3MuYXNweD9JZGlvbWE9ZW4tVVMfAQUHRW5nbGlzaGQCBQ8WAh8BBRBDb250JiMyMjU7Y3Rlbm9zZAIHDxYCHgdWaXNpYmxlZ2QCCQ8WBh8ABUVodHRwOi8vc2kzLmJjZW50cmFsLmNsL2VzdGFkaXN0aWNhcy9QcmluY2lwYWwxL3dlYl9zZXJ2aWNlcy9pbmRleC5odG0fAQULV2Vic2VydmljZXMfAmdkAgsPZBYCAgEPFgIeA3NyYwUmLi4vSW1hZ2VzL0Jhbm5lcnMvbWluaV9oZWFkZXJfYXp1bC5qcGdkAg0PFgQfAAUcaHR0cDovL3NpMy5iY2VudHJhbC5jbC9zaWV0ZR8BBR9CYXNlIGRlIGRhdG9zIGVzdGFkJiMyMzc7c3RpY29zZAIPD2QWAmYPZBYCZg9kFgQCAQ8WAh8BBQ9TZWxlY2Npb25lIGHDsW9kAgMPEGQQFSQEMTk4NAQxOTg1BDE5ODYEMTk4NwQxOTg4BDE5ODkEMTk5MAQxOTkxBDE5OTIEMTk5MwQxOTk0BDE5OTUEMTk5NgQxOTk3BDE5OTgEMTk5OQQyMDAwBDIwMDEEMjAwMgQyMDAzBDIwMDQEMjAwNQQyMDA2BDIwMDcEMjAwOAQyMDA5BDIwMTAEMjAxMQQyMDEyBDIwMTMEMjAxNAQyMDE1BDIwMTYEMjAxNwQyMDE4BDIwMTkVJAQxOTg0BDE5ODUEMTk4NgQxOTg3BDE5ODgEMTk4OQQxOTkwBDE5OTEEMTk5MgQxOTkzBDE5OTQEMTk5NQQxOTk2BDE5OTcEMTk5OAQxOTk5BDIwMDAEMjAwMQQyMDAyBDIwMDMEMjAwNAQyMDA1BDIwMDYEMjAwNwQyMDA4BDIwMDkEMjAxMAQyMDExBDIwMTIEMjAxMwQyMDE0BDIwMTUEMjAxNgQyMDE3BDIwMTgEMjAxORQrAyRnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2cWAQIjZAIRDxYCHwEFFEQmIzI0MztsYXIgb2JzZXJ2YWRvZAITDxYCHwEFFihQZXNvcyBwb3IgZCYjMjQzO2xhcilkAhUPFgIfAQUEQcOxb2QCFw8WAh8BBQQyMDE5ZAIZDw8WAh4HVG9vbFRpcAUGSW5pY2lvZGQCGw8WAh4FdGl0bGUFCEdyYWZpY2FyZAIdDw8WAh8EBRBFeHBvcnRhciBhIEV4Y2VsZGQCHw8WAh8FBQhJbXByaW1pcmQCIQ88KwALAQAPFggeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50Ah8eFV8hRGF0YVNvdXJjZUl0ZW1Db3VudAIfHglQYWdlQ291bnQCAWRkAiUPFgIfAQVbU2l0aW8gb3B0aW1pemFkbyBwYXJhIG5hdmVnYWRvciBJbnRlcm5ldCBFeHBsb3JlciA3LjAgeSByZXNvbHVjacOzbiBkZSBwYW50YWxsYSAxMDI0IHggNzY4LmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFDGltZ0J1dEluaWNpbwUMaW1nQnV0RXhwb3J0OpQyJfdQu5JWSdEOTYLjyZEgdiJIiuf0GFw8DENENOM=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script language="javascript">
+				
+					 function FreezeGridColumns(dgTbl, colNo) 
+					 {                        
+                        						
+					 	var tbl = document.getElementById(dgTbl);
+
+                        if (tbl != null)
+                        {
+					 	    for ( var i=0; i<tbl.rows.length; i++)
+    					 	{
+	    				 		for ( var j=0; j<colNo; j++) 
+		    			 		{ 
+                                    if (tbl.rows[i].cells[j] != null)
+                                    {
+					     			    tbl.rows[i].cells[j].className = 'locked'; 
+                                    }
+					 		    } 
+					 	    } 	
+                        }			
+					 } 
+				
+</script>
+					  <style type="text/css"> 
+					/* Locks table header */
+					th 
+					{ 					
+						/* border-right: 1px solid silver; */ 
+						position:relative;
+						cursor: default;
+						/*IE5+ only*/ 
+						top: expression(this.parentElement.parentElement.parentElement.parentElement.scrollTop -2);
+						z-index: 10;	
+					}
+					TR.GridNormal TH, TR.GridAlternate TH
+					{
+						text-align:left;
+					}
+					TR.GridHeader TH
+					{
+						
+					}					
+						
+					/* Locks the left column */ 
+					td.locked, th.locked 
+					{ 					
+						/* border-right: 1px solid silver; */ 
+						position:relative; 
+						cursor: default; 
+						/*IE5+ only*/	
+						left: expression(this.parentElement.parentElement.parentElement.parentElement.scrollLeft-2);	
+					} 
+					
+					/* Keeps the header as the top most item. Important for top left item*/ 
+					th.locked {z-index: 99;} 
+					</style> 
+					<style>
+					/*Overriding Grid Styles*/
+					.Grid
+					{
+						border:0;						
+					}
+					.GridHeader
+					{					
+						
+						padding : 1px 0px 1px 0px;						
+					}
+					.GridHeader TD A, TH A
+					{
+						text-decoration:none;						
+					}
+					.GridNormal
+					{
+						
+						font-weight: normal;						
+					}
+					.GridAlternate
+					{
+						
+						font-weight: normal;						
+					}
+					.GridSelected
+					{
+						
+						font-weight: normal;						
+					}
+					.GridPager
+					{
+											
+					}
+					</style>
+					
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F2BBC68">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACl/yKiHEfPvqA2UUSfBYEzFKRxekrlRQLiD5cB1DvfSuFIBLVUrcfiNQ3i2mSeWc0pRxwdNwDuToH6WVi13Gx95UFGuaKTeoCsJ09Q2OU4yg9Cq6BAah6IDWe4BXUgPqeAkXPrqdns8XI06s+liaznpAs6hxypjTvyW97FKd3eHvVXl8lVCWSRQvo646A+ZMzoIThicLaOFrudK40FOp7KA5jAwXMfQEkPy4MZYlQkTJsUd4fdNbmN1v4Er7OYr19tsHzyx64E3mEivlHt9TWO030jH+R4SX93MbD0S8bmO1wU8R7wlz0SZ/sR4g1LTdy0K/uAs2/0gjpl/UZoCiEGwyy/78L+KvSiUHCc6AYWPkeNEE99AhcUQE9ynieaUgWFjsp54ELJGmFVdO/vfsUJ+U4dIrVWrzBrCRgIzpu2xBfzV3+L+JqhcjOnlI5m/LFH6M4B/LBY9wTFDYnW4R4UJwptwXQs1WHBfnpi8EVPa/ZR9Pa5IY0MsZZ/1+Dj4wLqaHeCQkmA3z4u9eST+VUN98bPw7WsQM30doExuHQ+6rY0w1NrFtpzfTYqxbkI+EWpcagr7MZPg6jn/rr/IgbH0cZUsA/RNtNQ/x6GpmvKlVK7a6ATDwTFK+1V0IdvOcoKMwa5jpFaTTf04RSqjYTd5Wxi4NwxYkYAYULkq8U2yyxHNP9M77kkDMht428JJFmTHlsN91BGK8qcEeUr+5HEK0FSJQ+vVVprkvhuYl3FShxgtmmXfa//4XLreYkBNgpQx5y35UCEiyWFAuKvTmA9dDNLAxZqxR7rd4HOJrzUW8gFH6egR/tDqYy0JTPMnSz3OPJULsFO7cuUZLjNkNXO76r3GmTwQhYrGkR/HoZG8hoYL42UNuScBV9D4N+ca4nsR6rkAyreSpNRwq2XHj9np">
+</div>
+    <!-- CABECERA -->
+    <div id="nav_auxiliares">
+        <ul id="nav_ul">
+            <li><a href="http://www.bcentral.cl" id="HtmlWebBCCh">Web BCCh</a> </li>
+            <li>|</li>
+            <li><a href="IndicadoresDiarios.aspx?Idioma=en-US" id="HtmlIdioma">English</a> </li>
+            <li>|</li>
+            <li><a href="mailto:contacto_bde@bcentral.cl" id="HtmlAnchorContactenos">Contáctenos</a> </li>
+            <li id="separadorWeService">|</li>
+            <li><a href="http://si3.bcentral.cl/estadisticas/Principal1/web_services/index.htm" id="HtmlAnchorWebServices">Webservices</a> </li>
+            
+        </ul>
+        <div id="separador_top01"></div>
+    </div>
+    <div id="mini_header_azul">
+        <img src="../Images/Banners/mini_header_azul.jpg" id="imgBanner" onclick="goIndicadores()" style="cursor: pointer;">
+    </div>
+    <div class="navigation">
+        <div id="opciones">
+            <ul>
+                <li><a href="http://si3.bcentral.cl/siete" id="HtmlAnchorBDE">Base de datos estadísticos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navigation_fill">
+        &nbsp;&nbsp;
+    </div>
+    <!--CONTENIDO-->
+    <table id="tblSeleccionFecha" class="tblSeleccionFecha" style="width: 820px;" cellspacing="0" cellpadding="0" align="center">
+	<tbody><tr align="center">
+		<td align="center">
+                <label id="lblSeleccioneFecha" style="vertical-align: middle;">Seleccione año</label>
+                <select name="DrDwnFechas" onchange="javascript:setTimeout('__doPostBack(\'DrDwnFechas\',\'\')', 0)" id="DrDwnFechas" title="Selecionar año" class="dropDownListAnios" style="vertical-align: middle;">
+			<option value="1984">1984</option>
+			<option value="1985">1985</option>
+			<option value="1986">1986</option>
+			<option value="1987">1987</option>
+			<option value="1988">1988</option>
+			<option value="1989">1989</option>
+			<option value="1990">1990</option>
+			<option value="1991">1991</option>
+			<option value="1992">1992</option>
+			<option value="1993">1993</option>
+			<option value="1994">1994</option>
+			<option value="1995">1995</option>
+			<option value="1996">1996</option>
+			<option value="1997">1997</option>
+			<option value="1998">1998</option>
+			<option value="1999">1999</option>
+			<option value="2000">2000</option>
+			<option value="2001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option selected="selected" value="2019">2019</option>
+
+		</select>
+            </td>
+	</tr>
+</tbody></table>
+
+    <table id="tblTituloSeries" class="tblTituloSeries" cellspacing="0" cellpadding="0" align="center">
+        <tbody><tr align="center">
+            <td style="font-size: 12px;">
+                <label id="lblNombreSerie">Dólar observado</label>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <label id="lblUnidadMedida" class="tipo_letra">(Pesos por dólar)</label>
+            </td>
+        </tr>
+        <tr valign="bottom" align="center">
+            <td style="font-size: 12px;">
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <label id="lblAnio">Año</label>
+                <label id="lblAnioValor">2019</label>
+            </td>
+        </tr>
+    </tbody></table>
+    <table id="tool" class="tblBotoneraSeries" cellspacing="0" cellpadding="0" align="center">
+        <tbody><tr>
+            <td style="width: 750px; padding-right: 0px; text-align: right;">
+                <input type="image" name="imgButInicio" id="imgButInicio" title="Inicio" class="estilo_img" src="../Images/Botonera/back.png" style="height:23px;width:23px;">
+            </td>
+            <td style="text-align: center; width: 29px;">
+                <img src="../Images/Botonera/grafico_v6_chico.png" id="imgButGrafico" class="estilo_img" alt="Graficar" title="Graficar" onclick="javascript:window.showGrafico();" width="25" height="25">
+            </td>
+            <td style="margin-right: 2px; text-align: right; width: 35px;">
+                <input type="image" name="imgButExport" id="imgButExport" title="Exportar a Excel" src="../Images/Botonera/ico_excel.gif" style="height:25px;width:25px;">
+            </td>
+            <td style="text-align: center; width: 25px;">
+                <img src="../Images/Botonera/impresora.png" id="imgButImprimir" alt="Imprimir" class="estilo_img" title="Imprimir" onclick="javascript:window.print();" width="25" height="25">
+            </td>
+        </tr>
+    </tbody></table>
+    <table id="contenedor_serie" cellspacing="0" cellpadding="0" align="center">
+        <tbody><tr>
+            <td valign="top">
+                <div id="content_grid">
+                    <div id="div_gr" style=" HEIGHT:100%;  OVERFLOW:auto; "><table class="Grid" rules="rows" grdheadbackcolor="#688BA7" grdheaderfontcolor="White" id="gr" style="border-color:#2F2162;border-width:1px;border-style:solid;border-collapse:collapse;" cellspacing="0" cellpadding="2">
+	<tbody><tr class="GridHeader" style="color:White;background-color:#688BA7;font-weight:normal;height:30px;">
+		<th scope="col">Día</th><th scope="col">Enero</th><th scope="col">Febrero</th><th scope="col">Marzo</th><th scope="col">Abril</th><th scope="col">Mayo</th><th scope="col">Junio</th><th scope="col">Julio</th><th scope="col">Agosto</th><th scope="col">Septiembre</th><th scope="col">Octubre</th><th scope="col">Noviembre</th><th scope="col">Diciembre</th>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">1</td><td align="center"><span id="gr_ctl02_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl02_Febrero" class="obs">657,81</span></td><td align="center"><span id="gr_ctl02_Marzo" class="obs">651,79</span></td><td align="center"><span id="gr_ctl02_Abril" class="obs">678,53</span></td><td align="center"><span id="gr_ctl02_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl02_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl02_Julio" class="obs">679,15</span></td><td align="center"><span id="gr_ctl02_Agosto" class="obs">700,82</span></td><td align="center"><span id="gr_ctl02_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl02_Octubre" class="obs">728,21</span></td><td align="center"><span id="gr_ctl02_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl02_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">2</td><td align="center"><span id="gr_ctl03_Enero" class="obs">694,77</span></td><td align="center"><span id="gr_ctl03_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl03_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl03_Abril" class="obs">672,56</span></td><td align="center"><span id="gr_ctl03_Mayo" class="obs">678,71</span></td><td align="center"><span id="gr_ctl03_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl03_Julio" class="obs">677,62</span></td><td align="center"><span id="gr_ctl03_Agosto" class="obs">704,88</span></td><td align="center"><span id="gr_ctl03_Septiembre" class="obs">720,20</span></td><td align="center"><span id="gr_ctl03_Octubre" class="obs">729,38</span></td><td align="center"><span id="gr_ctl03_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl03_Diciembre" class="obs">812,13</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">3</td><td align="center"><span id="gr_ctl04_Enero" class="obs">697,09</span></td><td align="center"><span id="gr_ctl04_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl04_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl04_Abril" class="obs">670,05</span></td><td align="center"><span id="gr_ctl04_Mayo" class="obs">683,31</span></td><td align="center"><span id="gr_ctl04_Junio" class="obs">709,80</span></td><td align="center"><span id="gr_ctl04_Julio" class="obs">681,30</span></td><td align="center"><span id="gr_ctl04_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl04_Septiembre" class="obs">724,72</span></td><td align="center"><span id="gr_ctl04_Octubre" class="obs">727,80</span></td><td align="center"><span id="gr_ctl04_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl04_Diciembre" class="obs">804,29</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">4</td><td align="center"><span id="gr_ctl05_Enero" class="obs">697,64</span></td><td align="center"><span id="gr_ctl05_Febrero" class="obs">655,39</span></td><td align="center"><span id="gr_ctl05_Marzo" class="obs">656,57</span></td><td align="center"><span id="gr_ctl05_Abril" class="obs">667,55</span></td><td align="center"><span id="gr_ctl05_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl05_Junio" class="obs">704,59</span></td><td align="center"><span id="gr_ctl05_Julio" class="obs">680,48</span></td><td align="center"><span id="gr_ctl05_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl05_Septiembre" class="obs">725,69</span></td><td align="center"><span id="gr_ctl05_Octubre" class="obs">719,53</span></td><td align="center"><span id="gr_ctl05_Noviembre" class="obs">735,05</span></td><td align="center"><span id="gr_ctl05_Diciembre" class="obs">802,44</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">5</td><td align="center"><span id="gr_ctl06_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl06_Febrero" class="obs">653,80</span></td><td align="center"><span id="gr_ctl06_Marzo" class="obs">659,07</span></td><td align="center"><span id="gr_ctl06_Abril" class="obs">666,32</span></td><td align="center"><span id="gr_ctl06_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl06_Junio" class="obs">696,78</span></td><td align="center"><span id="gr_ctl06_Julio" class="obs">677,64</span></td><td align="center"><span id="gr_ctl06_Agosto" class="obs">711,13</span></td><td align="center"><span id="gr_ctl06_Septiembre" class="obs">723,30</span></td><td align="center"><span id="gr_ctl06_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl06_Noviembre" class="obs">736,66</span></td><td align="center"><span id="gr_ctl06_Diciembre" class="obs">796,75</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">6</td><td align="center"><span id="gr_ctl07_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl07_Febrero" class="obs">652,78</span></td><td align="center"><span id="gr_ctl07_Marzo" class="obs">657,49</span></td><td align="center"><span id="gr_ctl07_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl07_Mayo" class="obs">678,68</span></td><td align="center"><span id="gr_ctl07_Junio" class="obs">693,25</span></td><td align="center"><span id="gr_ctl07_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl07_Agosto" class="obs">721,70</span></td><td align="center"><span id="gr_ctl07_Septiembre" class="obs">717,52</span></td><td align="center"><span id="gr_ctl07_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl07_Noviembre" class="obs">745,85</span></td><td align="center"><span id="gr_ctl07_Diciembre" class="obs">784,25</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">7</td><td align="center"><span id="gr_ctl08_Enero" class="obs">688,42</span></td><td align="center"><span id="gr_ctl08_Febrero" class="obs">653,90</span></td><td align="center"><span id="gr_ctl08_Marzo" class="obs">658,40</span></td><td align="center"><span id="gr_ctl08_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl08_Mayo" class="obs">681,09</span></td><td align="center"><span id="gr_ctl08_Junio" class="obs">692,21</span></td><td align="center"><span id="gr_ctl08_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl08_Agosto" class="obs">716,35</span></td><td align="center"><span id="gr_ctl08_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl08_Octubre" class="obs">715,53</span></td><td align="center"><span id="gr_ctl08_Noviembre" class="obs">743,65</span></td><td align="center"><span id="gr_ctl08_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">8</td><td align="center"><span id="gr_ctl09_Enero" class="obs">679,69</span></td><td align="center"><span id="gr_ctl09_Febrero" class="obs">654,44</span></td><td align="center"><span id="gr_ctl09_Marzo" class="obs">662,19</span></td><td align="center"><span id="gr_ctl09_Abril" class="obs">664,17</span></td><td align="center"><span id="gr_ctl09_Mayo" class="obs">683,49</span></td><td align="center"><span id="gr_ctl09_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl09_Julio" class="obs">683,12</span></td><td align="center"><span id="gr_ctl09_Agosto" class="obs">718,55</span></td><td align="center"><span id="gr_ctl09_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl09_Octubre" class="obs">717,05</span></td><td align="center"><span id="gr_ctl09_Noviembre" class="obs">740,23</span></td><td align="center"><span id="gr_ctl09_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">9</td><td align="center"><span id="gr_ctl10_Enero" class="obs">680,10</span></td><td align="center"><span id="gr_ctl10_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl10_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl10_Abril" class="obs">663,01</span></td><td align="center"><span id="gr_ctl10_Mayo" class="obs">684,51</span></td><td align="center"><span id="gr_ctl10_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl10_Julio" class="obs">685,83</span></td><td align="center"><span id="gr_ctl10_Agosto" class="obs">710,98</span></td><td align="center"><span id="gr_ctl10_Septiembre" class="obs">711,22</span></td><td align="center"><span id="gr_ctl10_Octubre" class="obs">722,28</span></td><td align="center"><span id="gr_ctl10_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl10_Diciembre" class="obs">779,04</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">10</td><td align="center"><span id="gr_ctl11_Enero" class="obs">678,09</span></td><td align="center"><span id="gr_ctl11_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl11_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl11_Abril" class="obs">663,15</span></td><td align="center"><span id="gr_ctl11_Mayo" class="obs">686,43</span></td><td align="center"><span id="gr_ctl11_Junio" class="obs">692,28</span></td><td align="center"><span id="gr_ctl11_Julio" class="obs">688,88</span></td><td align="center"><span id="gr_ctl11_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl11_Septiembre" class="obs">713,72</span></td><td align="center"><span id="gr_ctl11_Octubre" class="obs">724,27</span></td><td align="center"><span id="gr_ctl11_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl11_Diciembre" class="obs">771,29</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">11</td><td align="center"><span id="gr_ctl12_Enero" class="obs">677,58</span></td><td align="center"><span id="gr_ctl12_Febrero" class="obs">656,46</span></td><td align="center"><span id="gr_ctl12_Marzo" class="obs">670,83</span></td><td align="center"><span id="gr_ctl12_Abril" class="obs">662,92</span></td><td align="center"><span id="gr_ctl12_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl12_Junio" class="obs">697,34</span></td><td align="center"><span id="gr_ctl12_Julio" class="obs">685,40</span></td><td align="center"><span id="gr_ctl12_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl12_Septiembre" class="obs">714,77</span></td><td align="center"><span id="gr_ctl12_Octubre" class="obs">720,61</span></td><td align="center"><span id="gr_ctl12_Noviembre" class="obs">746,23</span></td><td align="center"><span id="gr_ctl12_Diciembre" class="obs">778,14</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">12</td><td align="center"><span id="gr_ctl13_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl13_Febrero" class="obs">660,82</span></td><td align="center"><span id="gr_ctl13_Marzo" class="obs">669,37</span></td><td align="center"><span id="gr_ctl13_Abril" class="obs">664,19</span></td><td align="center"><span id="gr_ctl13_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl13_Junio" class="obs">693,60</span></td><td align="center"><span id="gr_ctl13_Julio" class="obs">683,38</span></td><td align="center"><span id="gr_ctl13_Agosto" class="obs">712,04</span></td><td align="center"><span id="gr_ctl13_Septiembre" class="obs">714,39</span></td><td align="center"><span id="gr_ctl13_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl13_Noviembre" class="obs">756,08</span></td><td align="center"><span id="gr_ctl13_Diciembre" class="obs">772,93</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">13</td><td align="center"><span id="gr_ctl14_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl14_Febrero" class="obs">660,49</span></td><td align="center"><span id="gr_ctl14_Marzo" class="obs">667,09</span></td><td align="center"><span id="gr_ctl14_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl14_Mayo" class="obs">685,67</span></td><td align="center"><span id="gr_ctl14_Junio" class="obs">694,89</span></td><td align="center"><span id="gr_ctl14_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl14_Agosto" class="obs">716,69</span></td><td align="center"><span id="gr_ctl14_Septiembre" class="obs">711,29</span></td><td align="center"><span id="gr_ctl14_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl14_Noviembre" class="obs">783,72</span></td><td align="center"><span id="gr_ctl14_Diciembre" class="obs">768,69</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">14</td><td align="center"><span id="gr_ctl15_Enero" class="obs">675,15</span></td><td align="center"><span id="gr_ctl15_Febrero" class="obs">661,60</span></td><td align="center"><span id="gr_ctl15_Marzo" class="obs">665,68</span></td><td align="center"><span id="gr_ctl15_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl15_Mayo" class="obs">693,04</span></td><td align="center"><span id="gr_ctl15_Junio" class="obs">696,25</span></td><td align="center"><span id="gr_ctl15_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl15_Agosto" class="obs">708,37</span></td><td align="center"><span id="gr_ctl15_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl15_Octubre" class="obs">712,98</span></td><td align="center"><span id="gr_ctl15_Noviembre" class="obs">794,51</span></td><td align="center"><span id="gr_ctl15_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">15</td><td align="center"><span id="gr_ctl16_Enero" class="obs">674,95</span></td><td align="center"><span id="gr_ctl16_Febrero" class="obs">665,90</span></td><td align="center"><span id="gr_ctl16_Marzo" class="obs">670,62</span></td><td align="center"><span id="gr_ctl16_Abril" class="obs">660,67</span></td><td align="center"><span id="gr_ctl16_Mayo" class="obs">692,33</span></td><td align="center"><span id="gr_ctl16_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl16_Julio" class="obs">681,07</span></td><td align="center"><span id="gr_ctl16_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl16_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl16_Octubre" class="obs">712,04</span></td><td align="center"><span id="gr_ctl16_Noviembre" class="obs">801,83</span></td><td align="center"><span id="gr_ctl16_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">16</td><td align="center"><span id="gr_ctl17_Enero" class="obs">673,76</span></td><td align="center"><span id="gr_ctl17_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl17_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl17_Abril" class="obs">662,86</span></td><td align="center"><span id="gr_ctl17_Mayo" class="obs">692,62</span></td><td align="center"><span id="gr_ctl17_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl17_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl17_Agosto" class="obs">710,14</span></td><td align="center"><span id="gr_ctl17_Septiembre" class="obs">707,07</span></td><td align="center"><span id="gr_ctl17_Octubre" class="obs">715,48</span></td><td align="center"><span id="gr_ctl17_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl17_Diciembre" class="obs">766,76</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">17</td><td align="center"><span id="gr_ctl18_Enero" class="obs">672,73</span></td><td align="center"><span id="gr_ctl18_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl18_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl18_Abril" class="obs">663,98</span></td><td align="center"><span id="gr_ctl18_Mayo" class="obs">692,79</span></td><td align="center"><span id="gr_ctl18_Junio" class="obs">698,72</span></td><td align="center"><span id="gr_ctl18_Julio" class="obs">679,48</span></td><td align="center"><span id="gr_ctl18_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl18_Septiembre" class="obs">709,81</span></td><td align="center"><span id="gr_ctl18_Octubre" class="obs">718,69</span></td><td align="center"><span id="gr_ctl18_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl18_Diciembre" class="obs">762,83</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">18</td><td align="center"><span id="gr_ctl19_Enero" class="obs">671,37</span></td><td align="center"><span id="gr_ctl19_Febrero" class="obs">663,98</span></td><td align="center"><span id="gr_ctl19_Marzo" class="obs">669,39</span></td><td align="center"><span id="gr_ctl19_Abril" class="obs">660,48</span></td><td align="center"><span id="gr_ctl19_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl19_Junio" class="obs">699,52</span></td><td align="center"><span id="gr_ctl19_Julio" class="obs">681,69</span></td><td align="center"><span id="gr_ctl19_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl19_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl19_Octubre" class="obs">713,23</span></td><td align="center"><span id="gr_ctl19_Noviembre" class="obs">782,82</span></td><td align="center"><span id="gr_ctl19_Diciembre" class="obs">756,95</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">19</td><td align="center"><span id="gr_ctl20_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl20_Febrero" class="obs">660,82</span></td><td align="center"><span id="gr_ctl20_Marzo" class="obs">667,21</span></td><td align="center"><span id="gr_ctl20_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl20_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl20_Junio" class="obs">696,81</span></td><td align="center"><span id="gr_ctl20_Julio" class="obs">683,27</span></td><td align="center"><span id="gr_ctl20_Agosto" class="obs">709,26</span></td><td align="center"><span id="gr_ctl20_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl20_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl20_Noviembre" class="obs">773,81</span></td><td align="center"><span id="gr_ctl20_Diciembre" class="obs">752,30</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">20</td><td align="center"><span id="gr_ctl21_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl21_Febrero" class="obs">658,75</span></td><td align="center"><span id="gr_ctl21_Marzo" class="obs">664,78</span></td><td align="center"><span id="gr_ctl21_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl21_Mayo" class="obs">696,61</span></td><td align="center"><span id="gr_ctl21_Junio" class="obs">693,99</span></td><td align="center"><span id="gr_ctl21_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl21_Agosto" class="obs">711,94</span></td><td align="center"><span id="gr_ctl21_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl21_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl21_Noviembre" class="obs">782,71</span></td><td align="center"><span id="gr_ctl21_Diciembre" class="obs">752,60</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">21</td><td align="center"><span id="gr_ctl22_Enero" class="obs">670,10</span></td><td align="center"><span id="gr_ctl22_Febrero" class="obs">654,52</span></td><td align="center"><span id="gr_ctl22_Marzo" class="obs">666,13</span></td><td align="center"><span id="gr_ctl22_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl22_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl22_Junio" class="obs">684,19</span></td><td align="center"><span id="gr_ctl22_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl22_Agosto" class="obs">710,63</span></td><td align="center"><span id="gr_ctl22_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl22_Octubre" class="obs">709,71</span></td><td align="center"><span id="gr_ctl22_Noviembre" class="obs">797,17</span></td><td align="center"><span id="gr_ctl22_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">22</td><td align="center"><span id="gr_ctl23_Enero" class="obs">672,42</span></td><td align="center"><span id="gr_ctl23_Febrero" class="obs">654,33</span></td><td align="center"><span id="gr_ctl23_Marzo" class="obs">665,12</span></td><td align="center"><span id="gr_ctl23_Abril" class="obs">662,27</span></td><td align="center"><span id="gr_ctl23_Mayo" class="obs">697,23</span></td><td align="center"><span id="gr_ctl23_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl23_Julio" class="obs">685,81</span></td><td align="center"><span id="gr_ctl23_Agosto" class="obs">709,52</span></td><td align="center"><span id="gr_ctl23_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl23_Octubre" class="obs">723,52</span></td><td align="center"><span id="gr_ctl23_Noviembre" class="obs">795,14</span></td><td align="center"><span id="gr_ctl23_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">23</td><td align="center"><span id="gr_ctl24_Enero" class="obs">672,26</span></td><td align="center"><span id="gr_ctl24_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl24_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl24_Abril" class="obs">663,91</span></td><td align="center"><span id="gr_ctl24_Mayo" class="obs">696,70</span></td><td align="center"><span id="gr_ctl24_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl24_Julio" class="obs">688,28</span></td><td align="center"><span id="gr_ctl24_Agosto" class="obs">713,22</span></td><td align="center"><span id="gr_ctl24_Septiembre" class="obs">715,24</span></td><td align="center"><span id="gr_ctl24_Octubre" class="obs">726,24</span></td><td align="center"><span id="gr_ctl24_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl24_Diciembre" class="obs">749,83</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">24</td><td align="center"><span id="gr_ctl25_Enero" class="obs">672,41</span></td><td align="center"><span id="gr_ctl25_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl25_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl25_Abril" class="obs">668,19</span></td><td align="center"><span id="gr_ctl25_Mayo" class="obs">698,03</span></td><td align="center"><span id="gr_ctl25_Junio" class="obs">683,41</span></td><td align="center"><span id="gr_ctl25_Julio" class="obs">691,57</span></td><td align="center"><span id="gr_ctl25_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl25_Septiembre" class="obs">722,17</span></td><td align="center"><span id="gr_ctl25_Octubre" class="obs">726,15</span></td><td align="center"><span id="gr_ctl25_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl25_Diciembre" class="obs">754,27</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">25</td><td align="center"><span id="gr_ctl26_Enero" class="obs">672,14</span></td><td align="center"><span id="gr_ctl26_Febrero" class="obs">651,36</span></td><td align="center"><span id="gr_ctl26_Marzo" class="obs">676,60</span></td><td align="center"><span id="gr_ctl26_Abril" class="obs">672,83</span></td><td align="center"><span id="gr_ctl26_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl26_Junio" class="obs">682,31</span></td><td align="center"><span id="gr_ctl26_Julio" class="obs">691,36</span></td><td align="center"><span id="gr_ctl26_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl26_Septiembre" class="obs">721,92</span></td><td align="center"><span id="gr_ctl26_Octubre" class="obs">723,43</span></td><td align="center"><span id="gr_ctl26_Noviembre" class="obs">795,94</span></td><td align="center"><span id="gr_ctl26_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">26</td><td align="center"><span id="gr_ctl27_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl27_Febrero" class="obs">649,22</span></td><td align="center"><span id="gr_ctl27_Marzo" class="obs">679,08</span></td><td align="center"><span id="gr_ctl27_Abril" class="obs">676,21</span></td><td align="center"><span id="gr_ctl27_Mayo" class="obs"></span></td><td align="center"><span id="gr_ctl27_Junio" class="obs">678,32</span></td><td align="center"><span id="gr_ctl27_Julio" class="obs">694,16</span></td><td align="center"><span id="gr_ctl27_Agosto" class="obs">716,40</span></td><td align="center"><span id="gr_ctl27_Septiembre" class="obs">727,08</span></td><td align="center"><span id="gr_ctl27_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl27_Noviembre" class="obs">791,16</span></td><td align="center"><span id="gr_ctl27_Diciembre" class="obs">751,04</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">27</td><td align="center"><span id="gr_ctl28_Enero" class="obs"></span></td><td align="center"><span id="gr_ctl28_Febrero" class="obs">649,80</span></td><td align="center"><span id="gr_ctl28_Marzo" class="obs">679,02</span></td><td align="center"><span id="gr_ctl28_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl28_Mayo" class="obs">694,84</span></td><td align="center"><span id="gr_ctl28_Junio" class="obs">680,06</span></td><td align="center"><span id="gr_ctl28_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl28_Agosto" class="obs">718,75</span></td><td align="center"><span id="gr_ctl28_Septiembre" class="obs">726,17</span></td><td align="center"><span id="gr_ctl28_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl28_Noviembre" class="obs">793,49</span></td><td align="center"><span id="gr_ctl28_Diciembre" class="obs">746,66</span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">28</td><td align="center"><span id="gr_ctl29_Enero" class="obs">667,04</span></td><td align="center"><span id="gr_ctl29_Febrero" class="obs">649,92</span></td><td align="center"><span id="gr_ctl29_Marzo" class="obs">683,73</span></td><td align="center"><span id="gr_ctl29_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl29_Mayo" class="obs">696,46</span></td><td align="center"><span id="gr_ctl29_Junio" class="obs">679,86</span></td><td align="center"><span id="gr_ctl29_Julio" class="obs"></span></td><td align="center"><span id="gr_ctl29_Agosto" class="obs">721,55</span></td><td align="center"><span id="gr_ctl29_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl29_Octubre" class="obs">725,87</span></td><td align="center"><span id="gr_ctl29_Noviembre" class="obs">806,30</span></td><td align="center"><span id="gr_ctl29_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">29</td><td align="center"><span id="gr_ctl30_Enero" class="obs">671,29</span></td><td align="center"><span id="gr_ctl30_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl30_Marzo" class="obs">681,09</span></td><td align="center"><span id="gr_ctl30_Abril" class="obs">673,86</span></td><td align="center"><span id="gr_ctl30_Mayo" class="obs">703,48</span></td><td align="center"><span id="gr_ctl30_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl30_Julio" class="obs">696,62</span></td><td align="center"><span id="gr_ctl30_Agosto" class="obs">724,20</span></td><td align="center"><span id="gr_ctl30_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl30_Octubre" class="obs">724,37</span></td><td align="center"><span id="gr_ctl30_Noviembre" class="obs">828,25</span></td><td align="center"><span id="gr_ctl30_Diciembre" class="obs"></span></td>
+	</tr><tr class="GridAlternate" style="color:#688BA7;background-color:#ECECF0;height:25px;">
+		<td align="center">30</td><td align="center"><span id="gr_ctl31_Enero" class="obs">669,60</span></td><td align="center"><span id="gr_ctl31_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl31_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl31_Abril" class="obs">677,67</span></td><td align="center"><span id="gr_ctl31_Mayo" class="obs">708,20</span></td><td align="center"><span id="gr_ctl31_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl31_Julio" class="obs">697,22</span></td><td align="center"><span id="gr_ctl31_Agosto" class="obs">720,65</span></td><td align="center"><span id="gr_ctl31_Septiembre" class="obs">725,68</span></td><td align="center"><span id="gr_ctl31_Octubre" class="obs">726,34</span></td><td align="center"><span id="gr_ctl31_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl31_Diciembre" class="obs">744,62</span></td>
+	</tr><tr class="GridNormal" style="color:#688BA7;background-color:White;height:25px;">
+		<td align="center">31</td><td align="center"><span id="gr_ctl32_Enero" class="obs">666,76</span></td><td align="center"><span id="gr_ctl32_Febrero" class="obs"></span></td><td align="center"><span id="gr_ctl32_Marzo" class="obs"></span></td><td align="center"><span id="gr_ctl32_Abril" class="obs"></span></td><td align="center"><span id="gr_ctl32_Mayo" class="obs">707,86</span></td><td align="center"><span id="gr_ctl32_Junio" class="obs"></span></td><td align="center"><span id="gr_ctl32_Julio" class="obs">699,98</span></td><td align="center"><span id="gr_ctl32_Agosto" class="obs"></span></td><td align="center"><span id="gr_ctl32_Septiembre" class="obs"></span></td><td align="center"><span id="gr_ctl32_Octubre" class="obs"></span></td><td align="center"><span id="gr_ctl32_Noviembre" class="obs"></span></td><td align="center"><span id="gr_ctl32_Diciembre" class="obs"></span></td>
+	</tr>
+</tbody></table></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+    <div>
+        <center>
+            
+        </center>
+    </div>
+    <div id="footer">
+        <div id="links_footer">
+            
+            <label id="LabelSitioOptimizado">Sitio optimizado para navegador Internet Explorer 7.0 y resolución de pantalla 1024 x 768.</label>
+        </div>
+    </div>
+    <input name="hdnFrecuencia" type="hidden" id="hdnFrecuencia" value="DAILY">
+    
+<script language="javascript">
+
+				// trims the height of the div surrounding the results table
+				// so that if a not a lot of results are returned,
+				// you dont have a lot of blank space between the results and
+				// the last buttons on the page
+				var divTbl = document.getElementById('div_gr');
+				var resultsTable = divTbl.children[0];
+				if ( typeof(resultsTable) != 'undefined' )
+				{
+				//alert( 'div ' + divTbl.offsetHeight + ' results: ' +  resultsTable.offsetHeight );
+				if( divTbl.offsetHeight + 3 > resultsTable.offsetHeight ) 
+					divTbl.style.height = resultsTable.offsetHeight + 50;
+				}
+               
+				
+</script></form>
+
+
+</body></html>

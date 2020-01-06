@@ -1,0 +1,10 @@
+scalar Date
+
+type Dolar {
+	fecha: Date
+	paridad: Float
+}
+
+type Query {
+	dolares(ano: Int): [Dolar]
+}
