@@ -3,6 +3,7 @@ package dolar.services;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
@@ -25,11 +26,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.springframework.stereotype.Component;
 
 import com.codeborne.selenide.WebDriverRunner;
 import com.google.common.collect.Lists;
 
-public class ServicioParidadBancoCentral implements ServicioParidadDolarObservado {
+@Component
+public class ScrapBancoCentral implements ScrapDolar {
 
 	private static final int ANO_INICIO = 2013;
 	final int FILAS = 31;
@@ -37,12 +40,6 @@ public class ServicioParidadBancoCentral implements ServicioParidadDolarObservad
 
 	Map<LocalDate, Double> conversionesDolar = new TreeMap<>();
 
-	static {
-		System.setProperty("phantomjs.binary.path", "/home/hans/Descargas/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
-		// Initiate PhantomJSDriver.
-		WebDriver driver = new PhantomJSDriver();
-		WebDriverRunner.setWebDriver(driver);
-	}
 
 	Optional<Double> extraeNumero(Element element) {
 
@@ -114,7 +111,12 @@ public class ServicioParidadBancoCentral implements ServicioParidadDolarObservad
 	}
 
 	@Override
-	public Map<LocalDate, Double> recuperarDatos() {
+	public Map<LocalDate, Double> recuperarDatos(Integer desde) {
+
+		File file = new File("/home/hans/Descargas/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
+		System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
+		WebDriver driver = new PhantomJSDriver();
+		WebDriverRunner.setWebDriver(driver);
 
 		open("http://si3.bcentral.cl/Indicadoressiete/secure/Indicadoresdiarios.aspx");
 
@@ -122,7 +124,7 @@ public class ServicioParidadBancoCentral implements ServicioParidadDolarObservad
 		$(By.id(linkText)).click();
 
 		LocalDate ahora = LocalDate.now();
-		for (int ano = ANO_INICIO; ano <= ahora.getYear(); ano++)
+		for (int ano = desde == null ? ANO_INICIO : desde; ano <= ahora.getYear(); ano++)
 			actualizarAno(ano);
 
 		Set<Entry<LocalDate, Double>> entrySet = conversionesDolar.entrySet();
@@ -137,7 +139,7 @@ public class ServicioParidadBancoCentral implements ServicioParidadDolarObservad
 		}
 
 		rellenarFechasNulasAlFinal();
-		probarCargaCorrectaDelSevicio();
+//		probarCargaCorrectaDelSevicio();
 
 		return conversionesDolar;
 
@@ -165,7 +167,7 @@ public class ServicioParidadBancoCentral implements ServicioParidadDolarObservad
 
 	void probarCargaCorrectaDelSevicio() {
 
-		ServicioParidadDolarObservado servicioParidad = new ServicioParidadBancoCentral();
+		ScrapDolar servicioParidad = new ScrapBancoCentral();
 		Double valorHoy = conversionesDolar.get(LocalDate.now());
 		if (valorHoy == null)
 			throw new IllegalStateException("El servicio de paridad banco central no cargó la fecha de hoy");

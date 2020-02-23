@@ -7,4 +7,9 @@ type Dolar {
 
 type Query {
 	dolares(ano: Int): [Dolar]
+	dolarHoy: Dolar
+}
+
+type Mutation {
+	actualizarDolares: [Dolar]
 }

@@ -1,5 +1,6 @@
 package dolar.graph;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,6 +26,12 @@ public class DolarQuery implements GraphQLQueryResolver {
 			return findAll.stream().filter(d -> d.fecha.getYear() == ano).collect(Collectors.toList());
 
 		return findAll;
+
+	}
+
+	public DolarObservado dolarHoy() {
+
+		return repo.findByFecha(LocalDate.now());
 
 	}
 
